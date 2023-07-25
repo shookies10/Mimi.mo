@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins: 300, 400, 500, 600, 700,808,900&display-swap'); 
+@import url('https://fonts.googleapis.com/css?family=Rancho&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    background: black;
+
+}
+#header{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 30px 100px;
+   display: flex;
+   justify-content: space-between;
+   align-self: center;
+   z-index: 10000;
+} 
+
+#header .logo{
+    color: white;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+    margin-right: 100px;
+}
+
+#header .logo span{
+    color: #b79a81;
+}
+section{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 100px;
+}
+section .contentBx{
+    position: relative;
+    max-width: 600px;
+    z-index: 1000;
+}
+section .contentBx h2{
+    font-size: 60px;
+    color: white;
+    text-transform: uppercase;
+}
+section .contentBx p{
+    font-size: 18 px;
+    color: white;
+
+}
+section .contentBx .countdown{
+    display: flex;
+    margin: 20px 0;
+}
+section .contentBx .countdown .time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    margin-right: 20px;
+    font-size: 48px;
+    min-width: 110px;
+    font-weight: 700;
+    padding: 10px 5px 15px;
+    border-radius: 4px;
+    color: black;
+}
+section .contentBx .countdown .time span{
+    margin-top: -10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: grey ;
+}
+section .contentBx a{
+    position: relative;
+    margin-top: 10px;
+    display: inline-block;
+    background: dimgray;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 40px;
+}
+section .imgBx img{
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 100px;
+    z-index: 2;
+    margin-right: 150px;
+    margin-bottom: 20px;
+}
+.wave {
+   position: absolute;
+   bottom: 0;
+   right: 0; 
+   z-index: 1 ;
+   pointer-events: none;
+
+}
+.newsletter{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 60px;
+    background: white;
+    z-index: 10000;
+    box-shadow: 0 0 0 100vh rgba(49, 39, 71, 0.95);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+.newsletter.active{
+    visibility: visible;
+    opacity: 1;
+}
+.newsletter h2{
+    font-size: 48px;
+    color: black;
+}
+.newsletter p{
+    font-size: 20px;
+    color: darkgray;
+}
+.newsletter .inputbox{
+    margin-top: 20px;
+}
+.newsletter .inputbox input{
+    padding: 10px;
+    outline: none;
+    width: 300px;
+    font-size: 18px;
+    border: 1px solid #999;
+}
+.newsletter .inputbox input[type="submit"]{
+    padding: 10px;
+    outline: none;
+    width: 140px;
+    color: white;
+    background: black;
+    border: 1px solid grey;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.newsletter .close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.row {
+    position: relative;
+    padding: 100px;
+    background: white;
+    margin-top: 150px ;
+    border-radius: 10px;
+    margin-bottom: 150px;
+}
+.row h2{
+    font-size: 3em;
+    color: black;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.row p{
+    font-size: 1em;
+    color: black;
+}
+.card img{
+    border-radius: 10px;
+}
