@@ -1,0 +1,705 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins: 300, 400, 500, 600, 700,808,900&display-swap'); 
+@import url('https://fonts.googleapis.com/css?family=Rancho&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    overflow-x: hidden;
+    background: #fff;
+    min-height: 100vh; 
+}
+#header{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 30px 100px;
+   display: flex;
+   justify-content: space-between;
+   align-self: center;
+   z-index: 10000;
+} 
+
+#header .logo{
+    color: black;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;}
+
+#header .logo span{
+    color: #b79a81;
+}
+
+
+#header .navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .navbar li{
+    list-style: none;
+    margin-left: 20px; 
+}
+#header .navbar li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: black;
+    border-radius: 20px;
+    font-weight: 400;
+}
+#header .navbar li a.active {
+    background: black;
+    color: white;
+}
+#header .navbar li a:hover{
+    background-color: grey;
+}
+
+#header .navbar li ul{
+    display: block;
+    background: rgba(255,255,255,0.5);
+    min-width: 250px;
+    position: absolute;
+    margin-top: 7px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 25px;
+    transform: translateY(40px);
+}
+#header .navbar li:hover ul{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+#header .navbar li ul li a{
+    padding: 10px;
+}
+
+
+section{ 
+    position: relative;  
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, white ,transparent);
+    z-index: 10;
+}
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section #text{
+    position: absolute;
+    color: black;
+    font-size: 10vw;
+    font-weight: 900;
+    text-align: center;
+    line-height: 0.55em;
+    font-family: 'Rancho', cursive;
+    transform: translateY(-50%);
+}
+section #text span{
+    font-size: 0.20em;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-family: 'Poppins',sans-serif;
+}
+#btn{
+    text-decoration: none;
+    display: inline block;
+    padding: 8px 30px;
+    background:#b79a81;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    transform: translateY(70px);
+}
+.row {
+    position: relative;
+    padding: 100px;
+    background: white;
+}
+.row h2{
+    font-size: 3em;
+    color: black;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.row p{
+    font-size: 1em;
+    color: black;
+}
+
+.card{
+    position: relative;
+    width: 600px;
+    height: 350px;
+    background: black;
+    border-radius: 20px; 
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.card .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius:20px;
+    overflow: hidden;
+    
+}
+.card .circle::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #b79a81;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+}
+.card:hover .circle:before{
+    background: black;
+    clip-path: circle(400px at center);
+}
+.card img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.card:hover img{
+    left: 72%;
+    height: 500px;
+}
+.card .content{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 20px;
+}
+.card:hover .content{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+.card .content h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+    margin-bottom: 5px;
+}
+.card .content p{
+    color: #fff;
+}
+.card .content a{
+    position: relative;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #fff;
+    color: black;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+
+.row11 {
+    position: relative;
+    padding: 50px;
+    background: black;}
+.row1 {
+    position: relative;
+    padding: 50px;
+    background: black;
+}
+.row1 h2{
+    text-align: center;
+    font-size: 3em;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.row1 p{
+    text-align: center;
+    font-size: 1em;
+    color: white ;
+}
+
+
+.container-fluid{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 10px 50px;
+    background: black; 
+}
+.container-fluid .card01{
+   position: relative;
+   display: flex;
+   justify-content:center;
+   align-items: flex-start;
+   width: 350px;
+   height: 300px;
+   background: white;
+   border-radius: 20px;
+   
+   transition: 0.5s;
+}
+.container-fluid .card01:hover{
+    height: 400px;
+}
+.container-fluid .card01 .imgBx{
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: black;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.container-fluid .card01:hover .imgBx{
+    top: -100px;
+    scale: 0.75;
+}
+.container-fluid .card01 .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container-fluid .card01 .content01{
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    padding: 0 30px;
+    height: 35px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+}
+.container-fluid .card01:hover .content01{
+    top: 130px;
+    height: 250px;
+}
+.container-fluid .card01 .content01 h2{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--clr);
+}
+.container-fluid .card01 .content01 p{
+    color: black;
+}
+.container-fluid .card01 .content01 a{
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--clr);
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+
+.row2 {
+    position: relative;
+    padding: 50px;
+    background: black;
+}
+.row2 h2{
+    text-align: center;
+    font-size: 3em;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.row2 p{
+    text-align: center;
+    font-size: 1em;
+    color: white ;
+}
+
+
+.container-fluid1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 10px 50px;
+    background: black; 
+}
+
+.container-fluid1 .content1{
+    text-align: center;
+    padding: 40px;
+    color: #fff;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+}
+
+.container-fluid1 .content1 .img-area{
+    display: inline-block;
+    width: 55%;
+    margin-bottom: 15px;
+}
+.container-fluid1 .content1 .img-area img{
+    border-radius: 50%;
+
+}
+.container-fluid1 .content1 .text-area h2{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.container-fluid1 .content1 .text-area p{
+    line-height: 1.5;
+
+}
+.socials{
+    margin-top: 30px;
+}
+.socials a{
+    text-decoration: none;
+    color: white;
+}
+.socials i{
+    font-size: 30px;
+    margin: 0 10px;
+}
+.socials i:hover{
+    color: grey;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 3px;
+
+}
+.owl-dot{
+    display: inline-block;
+    height: 3px !important;
+    width: 30px !important;
+    background-color: #fff !important;
+    opacity: 0.8;
+    margin: 0 6px;
+
+}
+.owl-dot.active{
+    background-color: #fff !important;
+
+}
+
+
+
+
+
+.row3{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(34, 34, 33);
+}
+.row3::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: white;
+}
+
+.row3 .container{
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+}
+.row3 .container .contactinfo{
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: black;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2);
+}
+.row3 .container .contactinfo h2{
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+}
+.row3 .container .contactinfo .info{
+    position: relative;
+    margin: 20px 0;
+}
+.row3 .container .contactinfo .info li{
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 20px 0;
+    cursor: pointer;
+    align-items: flex-start;
+    color: #fff;
+}
+.row3 .container .contactinfo .info li span:nth-child(1){
+    width: 30px;
+    min-width: 30px;
+}
+.row3 .container .contactinfo .info li i{
+    font-size: 30px;
+    margin: 0 10px;
+    color: #fff;
+} 
+.row3 .container .contactinfo .info li:hover,
+.row3 .container .contactinfo .info li i:hover{
+    color: grey;
+} 
+
+.sci{
+    margin-top: 30px;
+}
+.sci a{
+    text-decoration: none;
+    color: white;
+}
+.sci i{
+    font-size: 30px;
+    margin: 0 10px;
+}
+.sci i:hover{
+    color: grey;
+}
+
+.row3 .container .contactform{
+   position: absolute;
+   padding: 70px 50px;
+   background: grey;
+   margin-left: 150px;
+   padding-left: 250px;
+   width: calc(100% - 150px);
+   height: 100%;
+   box-shadow: 0 50px 50px rgba(0,0,0,0.5); 
+}
+.row3 .container .contactform h2{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 900;
+}
+.row3 .container .contactform .formbox{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+.row3 .container .contactform .formbox .inputbox{
+    position: relative;
+    margin: 0 0 35px 0;
+}
+.row3 .container .contactform .formbox .inputbox.w50{
+    width: 47% ;
+}
+.row3 .container .contactform .formbox .inputbox.w100{
+    width: 100%;
+}
+.row3 .container .contactform .formbox .inputbox input{
+    width: 100% !important;
+    padding: 5px 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: black;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.row3 .container .contactform .formbox .inputbox textarea{
+    min-height: 120px;
+}
+.row3 .container .contactform .formbox .inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(165, 164, 164);
+    transition: 0.5s;
+    pointer-events: none;
+}
+.row3 .container .contactform .formbox .inputbox input:focus ~ span,
+.row3 .container .contactform .formbox .inputbox textarea:focus ~ span,
+.row3 .container .contactform .formbox .inputbox input:valid ~ span,
+.row3 .container .contactform .formbox .inputbox textarea:valid ~ span{
+    transform: translateY(-30px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: rgb(34, 34, 33);
+}
+.row3 .container .contactform .formbox .inputbox input[type="submit"]{
+    position: relative;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+    border-radius: 10px;
+}
+.row3 .container .contactform .formbox .inputbox input[type="submit"]:hover{
+    background: rgb(34, 34, 33);
+}
+ 
+.footbod{
+    display: grid;
+    justify-content: end;
+    align-content: end;
+    min-height: 100vh;
+    background: black;
+    padding: 50px;
+}
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background:rgb(68, 68, 67);
+}
+footer .container1{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+footer .container1 .sec h2{
+    position: relative;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+footer .container1 .sec p{
+    color: rgb(184, 182, 182) ;
+}
+footer .container1 .scii{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,50px);
+}
+footer .container1 .scii li{
+    list-style: none;
+}
+footer .container1 .scii li a{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: white;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 25px;
+}
+footer .container1 .scii li a i{
+    color: black;
+    font-size: 20px;
+}
+footer .container1 .quicklinks{
+    position: relative;
+}
+footer .container1 .quicklinks ul li{
+    list-style: none;
+}
+footer .container1 .quicklinks ul li a{
+    color:rgb(184, 182, 182);
+    text-decoration: none ;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+footer .container1 .contact .inform{
+    position: relative;
+}
+footer .container1 .contact .inform li{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 16px;
+}
+footer .container1 .contact .inform li span{
+    color: rgb(184, 182, 182);
+    font-size: 20px;
+}
+footer .container1 .contact .inform li a{
+    color: rgb(184, 182, 182);
+    text-decoration: none;
+}
+.copyrighttext{
+    width: 100%;
+    background: rgb(68,68,67);
+    padding: 20px 100px 30px;
+    text-align: center;
+    color: rgb(184, 182, 182);
+    border: 1px solid black;
+}
+.copyrighttext p i{
+    color: rgb(184, 182, 182);
+    font-size: 15px;
+}
